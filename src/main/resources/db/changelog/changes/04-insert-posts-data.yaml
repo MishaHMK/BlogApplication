@@ -1,0 +1,83 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-posts-data
+      author: MishaHMK
+      changes:
+        - insert:
+            tableName: posts
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-10T09:15:00Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Spring Boot REST Basics"
+              - column:
+                  name: image_ref
+                  value: "https://i.postimg.cc/YSzYb9gG/images.jpg"
+              - column:
+                  name: content
+                  value: "Spring Boot makes it easy to create stand-alone, production-ready applications. In this article, we walk through creating a simple REST API using Spring Boot, Spring Web, and Spring Data JPA. We cover setting up the project with Maven, defining the entity model, creating a repository interface, and implementing a REST controller. We also discuss best practices for structuring the project, handling exceptions, and testing endpoints with Postman. By the end, you will have a working REST API with CRUD functionality that can be deployed to any environment."
+
+        - insert:
+            tableName: posts
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-12T10:25:00Z"
+              - column:
+                  name: update_date
+                  value: "2025-07-14T09:15:00Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Understanding Hibernate Fetch Types"
+              - column:
+                  name: image_ref
+                  value: "https://i.postimg.cc/DZDQRzf2/8-Byxy6w-M.png"
+              - column:
+                  name: content
+                  value: "Hibernate supports two primary fetching strategies: EAGER and LAZY. This article explains how each works, when to use them, and how they impact performance. We provide examples using @OneToMany, @ManyToOne, and @ManyToMany relationships. You will see how to switch between fetch types using annotations, and we will discuss how fetching strategies affect SQL queries and memory usage. We also address the N+1 query problem, how to detect it using logs, and how to solve it with JOIN FETCH. Finally, we share guidelines for choosing the right fetch strategy for your use case."
+
+        - insert:
+            tableName: posts
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-18T14:45:00Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Java 21 New Features"
+              - column:
+                  name: image_ref
+                  value: "https://i.postimg.cc/LXz6FC2n/download.png"
+              - column:
+                  name: content
+                  value: "Java 21 introduces several exciting features that improve developer productivity and code safety. In this article, we explore virtual threads from Project Loom, which simplify concurrent programming by reducing the cost of creating and managing threads. We also cover string templates, unnamed classes, and new APIs in the Collections framework. Each feature is explained with code examples to help you get started. Additionally, we discuss performance benchmarks comparing Java 21 with earlier versions, and we explore migration tips for upgrading existing projects to Java 21."
+
+        - insert:
+            tableName: posts
+            columns:
+              - column:
+                  name: publication_date
+                  value: "2025-07-04T15:14:42Z"
+              - column:
+                  name: author_id
+                  value: '2'
+              - column:
+                  name: title
+                  value: "Design Patterns in Java"
+              - column:
+                  name: image_ref
+                  value: "https://i.postimg.cc/tCrRbVQt/Java-Design-Patterns.png"
+              - column:
+                  name: content
+                  value: "Design patterns provide proven solutions to common software design problems. In this article, we explore several popular patterns, including Singleton, Factory Method, Observer, and Builder. For each pattern, we provide a real-world example, UML diagram, and Java implementation. We discuss the advantages and trade-offs of using each pattern and provide tips for recognizing when a pattern might be overkill. Finally, we look at how modern Java features like lambdas and records can simplify or replace traditional design pattern implementations."
