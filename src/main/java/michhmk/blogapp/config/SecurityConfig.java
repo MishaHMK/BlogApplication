@@ -40,6 +40,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers(
                                 antMatcher("/auth/**"),
+                                antMatcher(HttpMethod.GET,"/post/**"),
                                 antMatcher("/swagger-ui/**"),
                                 antMatcher("/v3/api-docs/**"))
                         .permitAll()
