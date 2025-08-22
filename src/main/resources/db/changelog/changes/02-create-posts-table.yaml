@@ -20,14 +20,12 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: content
-                  type: text
+                  type: varchar(10000)
                   constraints:
                     nullable: false
               - column:
                   name: image_ref
                   type: varchar(255)
-                  constraints:
-                    nullable: false
               - column:
                   name: publication_date
                   type: timestamptz

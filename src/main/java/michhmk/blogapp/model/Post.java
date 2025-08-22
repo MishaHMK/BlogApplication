@@ -7,7 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.time.OffsetDateTime;
@@ -22,7 +21,7 @@ import org.hibernate.annotations.SQLDelete;
 @Setter
 @NoArgsConstructor
 @Table(name = "posts")
-@SQLDelete(sql = "UPDATE posts SET is_deleted = true")
+@SQLDelete(sql = "UPDATE posts SET is_deleted = true WHERE id = ?")
 @Accessors(chain = true)
 public class Post {
     @Id
@@ -32,10 +31,10 @@ public class Post {
     @Column(nullable = false, length = 100)
     private String title;
 
-    @Lob
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(nullable = false)
     private String content;
 
+    @Column(name = "image_ref")
     private String imageRef;
 
     @Column(nullable = false, updatable = false)
